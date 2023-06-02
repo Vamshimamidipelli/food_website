@@ -1,0 +1,967 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+*{
+    margin: 0 ;
+    padding: 0 ;
+    box-sizing: border-box;
+}
+html,body{
+    margin: 0;
+    background-color: #ffffff;
+    color: #555;
+    position: relative;
+    font-family: Lato,sans-serif;
+    font-weight: 300;
+    overflow-x: hidden;
+    font-size: 20px;
+    text-rendering: optimizeLegibility;
+}
+header{
+    background-image:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url(6.jpeg) ;
+    background-attachment: fixed;
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+}
+h1{
+    color: white;
+    font-size: 240%;
+    background: linear-gradient(to right,#cf6d17,#6c14d0);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 300;
+    text-transform: uppercase;
+    word-spacing: 4px;
+    margin-top: 0;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+}
+.hero-text-box{
+    position: absolute;
+    width: 1140px;
+    top: 600px;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.btn:link,
+.btn:visited{
+    display: inline-block;
+    transition: 0.3s;
+    font-weight: 300;
+    text-decoration: none;
+    border-radius: 40px;
+    padding: 10px 30px;
+}
+.btn-full:visited,
+.btn-full:link{
+    border: 1px solid #e67e22;
+
+    color: white;
+    background-color: #e67e22;
+    margin-right: 20px;
+}
+.btn-ghosh:visited,
+.btn-ghosh:link
+{
+    border: 1px solid #e67e22;
+    color: white;
+}
+.btn:hover,
+.btn:active{
+    background-color: #cf6d17;
+    color: white;
+    border:1px solid #cf6d17;
+}
+.logo{
+    width: auto;
+    height: 120px;
+    float: left;
+
+}
+.main-nav{
+    margin-right: 20px;
+    float: right;
+    margin-top: 55px;
+    list-style: none;
+}
+.main-nav li{
+    display: inline-block;
+    margin-left: 40px;
+}
+.main-nav li a{
+    text-decoration: none;
+    text-transform: uppercase;
+    color: white;
+    border: 2px solid transparent;
+    transition: 0.3s;
+    padding: 8px 0;
+    font-size: 90%;
+}
+.main-nav li a:hover{
+    border-bottom: 3px solid #cf6d17;
+}
+.colspan{
+    float: left;
+    width: 23.5%;
+    margin-left: 20px;
+    margin-top: 25px;
+    
+}
+section{
+    margin: 80px 20px;
+    
+}
+h2{
+    font-size: 180%;
+    font-weight: 300;
+    text-transform: uppercase;
+    text-align: center;
+    word-spacing: 3px;
+    margin-bottom: 40px;
+}
+h2:after{
+    display: block;
+    content: " ";
+    height: 2px;
+    background-color: #e67e22;
+    width: 400px;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+.long-copy{
+    width: 70%;
+    line-height: 140%;
+    margin-left: 15%;
+}
+.colspan h3{
+    font-weight: 900;
+    font-size: 120%;
+    margin-bottom: 20px;
+    text-align: center;
+    text-transform: uppercase;
+}
+.colspan p{
+    line-height: 140%;
+    margin-bottom: 50px;
+    font-size: 90%;
+}
+.icon-big{
+    display: block;
+    font-size: 340%;
+    color: #e67e22;
+    margin: 20px auto;
+    margin-bottom: 20px;
+}
+.meals-showcase{
+    width: 100%;
+    
+    list-style: none;
+}
+.meals-showcase li {
+    width: 25%;
+    display: flex;
+    float: right;
+}
+.meal-photo{
+    width: 100%;
+    margin: 0;
+    background-color: #000;
+    overflow: hidden;
+}
+.meal-photo img{
+    width: 100%;
+    position: relative;
+    top: 30px;
+    height: auto;
+    transform: scale(1.1);
+    opacity: 1;
+    
+}
+.meal-photo img:hover{
+    transform: scale(1.3);
+    transition: 0.5s;
+    border-radius: 30px;
+    cursor: pointer;
+    opacity: 0.7;
+}
+.section-meals{
+    margin: 0;
+    margin-top: 30px;
+}
+.works-step{
+    margin-right: 25px;
+    margin-bottom: 30px;
+}
+
+.works-step{
+    position: relative;
+    top: 150px;
+    margin-left: 100px;
+    overflow: hidden;
+}
+.steps-box:first-child{
+    text-align: center;
+    padding-right: 3% ;
+    margin-top: 30px;
+}
+.steps-box:last-child{
+    padding-left: 3%;
+    margin-top: 70px;
+}
+.hello{
+    width: 30%;
+    box-shadow: 10px 10px 5px #aaaaaa;
+    float: left;
+    position: relative;
+    bottom: 20px;
+}
+.works-step div{   
+    border:4px solid #e67e22;
+    color: #cf6d17;
+    border-radius: 50%;
+    height: 55px;
+    padding: 5px;
+    font-size: 150%;
+    text-align: center;
+    width: 55px;
+    float: left;
+}
+.btn-app img{
+    width: auto;
+    height: 50px;
+    overflow: hidden;
+    position: relative;
+    top: 150px;
+    left: 200px;
+    margin-right: 15px;
+}
+.works-step:last-of-type{
+    margin-bottom: 80px;
+}
+.clearfix{zoom: 1;}
+.clearfix::after{
+    content: '.';
+    clear: both;
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+
+.section-steps h2{
+    margin-top: 50px;
+    padding-top: 30px;
+}
+.air{
+    margin-top: 350px;
+
+}
+.aiir {
+    float: left;
+    width: 22%;
+    margin: 0 20px;
+    margin-bottom: 40px;
+    overflow: hidden;
+    
+}
+.aiir img{
+    height: 200px;
+    width: 100%;
+    margin-bottom: 15px;
+}
+.icon-small{
+    display: inline-block;
+    color: #e67e22;
+    width: 30px;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 30px;
+    line-height: 140%;
+    margin-right: 10px;
+    margin-top: -5px;
+
+}
+ .city-features a{
+    color: #e67e22;
+    text-decoration: none;
+    border-bottom: 10px solid #e67e22;
+    padding-bottom: 1px;
+}
+.city-features a:hover{
+    color: #555;
+    transition: 0.5s;
+}
+.cutomer3{
+    width: 33.3%;
+    float: left;
+    overflow: hidden;
+    margin-bottom: 200px;
+}
+.cutomer3 img{
+    margin-top: 100px;
+}
+.cutomer3 img {
+    width: 100%;
+    height: 500px;
+}
+.cutomer3 cite{
+    color: #000;
+    font-weight: 700;
+}
+.section-testinomials {
+
+    background-attachment: fixed;
+    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url(background1.jpeg);
+    background-size: cover;
+    background-position: center bottom;
+    border-radius: 10px;
+    margin-top: 480px;
+    padding-bottom: 450px;
+    color: white;
+}
+blockquote{
+    font-style: italic;
+    line-height: 150%;
+    position: relative;
+    margin-top: 20px;
+    padding: 2%;
+}
+cite{
+    font-size: 90%;
+    display: block;
+    position: relative;
+    
+    color: white !important;
+    margin-top: 30px;
+}
+cite img {
+    height: 100px !important;
+    border-radius: 50%;
+    width: 100px !important;
+    margin-top: -1px !important;
+    vertical-align: center;
+}
+blockquote::before{
+    content: '\201c';
+    font-size: 500%;
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 2px;
+    left: -3px;
+}
+.plan-box{
+    width: 30.3%;
+    float: left;
+    background-color: #fff;
+    margin-right: 41px;
+    border-radius: 15px;
+    
+
+    
+}
+.section-plans{
+    background-color:#f4f4f4 ;
+    background-size: cover;
+    background-position: center bottom;
+    padding-bottom: 500px;
+    padding-left: 20px;
+}
+.plan-box div {
+    padding: 15px;
+    border-bottom: 1px solid #e8e8e8;
+
+}
+.col3{
+    margin-bottom: 100px;
+}
+.plan-price{
+    font-size: 300%;
+    font-weight: 700;
+    color: #e67e22;
+    margin-bottom: 15px;
+}
+.plan-price-meal{
+    font-size: 80%;
+}
+.plan-price span{
+    font-size: 30%;
+    font-weight: 900;
+}
+.plan-box ul{
+    list-style: none;
+}
+.plan-box ul li {
+    padding: 5px 0;
+}
+.plan-box div:last-child{
+    border: 0;
+    text-align: center;
+
+}
+.col122{
+    float: left;
+    width: 33.33%;
+    margin-bottom: 10px;
+
+}
+.asus{
+    margin-bottom: 30px;
+}
+.contact-form{
+    width: 60%;
+    margin: 0 auto;
+}
+input[type=text],
+input[type=email],
+textarea,
+select{
+    width: 60%;
+    padding: 7px;
+    border: 1px solid #ccc;
+    border-radius:3px ;
+}
+input[type=submit]{
+    display: inline-block;
+    transition: 0.3s;
+    font-weight: 300;
+    background-color: white;
+    text-decoration: none;
+    border: 1px solid #e67e22;
+    border-radius: 40px;
+    padding: 10px 30px;
+}
+input[type=submit]:hover{
+    background-color: #e67e22;
+    color: white;
+}
+.footer-nav{
+    float: left;
+    width: 50%;
+    margin-left: 10px;
+    list-style: none;
+    
+}
+.social-links{
+    list-style: none;
+    float: right;
+}
+footer{
+    background-color: #555;
+    padding: 80px;
+    font-size: 80%;
+}
+.social-links li{
+    color: white;
+}
+.footer-nav li ,
+.social-links li{
+    display: inline-block;
+    margin-right: 20px;
+}
+.footer-nav li a,
+.social-links li {
+    text-decoration: none;
+    border: 0;
+    color: #888;
+}
+.footer-nav li a:hover{
+    color: #ddd;
+    transition: 0.4s;
+}
+footer p{
+    color: #888;
+    font-size: 120%;
+    text-align: center;
+    margin-top: 60px;
+}
+.fb:hover{
+    color: #3b5998;
+}
+.twitter:hover{
+    color: #dd4b39;
+}
+.google:hover{
+    color: #00aced;
+}
+.insta:hover{
+    color: #517fa4;
+}
+.social-links li {
+    font-size: 200%;
+}
+
+
+
+
+
+
+        </style>
+        
+        <title>My food website</title>
+
+        <link rel="stylesheet" href="style.css">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;1,100&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" href="vendars/css/normalize.css">
+        <link rel="stylesheet" href="resources/css/style.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="resources/img/queries.css">
+
+        <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    </head>
+    <body>
+        <header>
+            <nav>
+                <div class="row ">
+                    <img class="logo" src="logo12.jpeg" alt="logo-img">
+                    <ul class="main-nav">
+                        <li><a href="#features">Food delivery</a></li>
+                        <li><a href="#hiw">How it works</a></li>
+                        <li><a href="#citi">Our cities</a></li>
+                        <li><a href="#signup">Sign-up</a></li>    
+                    </ul>
+                </div>
+                
+            </nav>
+            <div class="hero-text-box">
+                <h1>Goodbye junck food<br>Hello super helthy food</h1>
+                <a class="btn btn-full" href="#plans">I'm hungry</a>
+                <a class="btn btn-ghosh" href="#features">Show me more</a>
+
+            </div>
+        </header>
+        <section class="section-features" id="features">
+            <div class="row">
+                <h2>Get food fast &mdash; not fast food</h2>
+                <p class="long-copy">
+                    Food is one of the basic necessities of life. Food contains nutrients—substances essential for 
+                    the growth, repair, and maintenance of body tissues and for the regulation of vital processes. 
+                </p>
+            </div>
+            <div class="row">
+                <div class="colspan">
+                    <ion-icon class="icon-big" name="infinite-outline"></ion-icon>
+                    <h3>Up to 365 days/year</h3>
+                    <p>                    Food is one of the basic necessities of life. Food contains nutrients—substances essential for 
+                        the growth, repair, and maintenance of body tissues and for the regulation of vital processes.</p>
+                </div>
+                <div class="colspan">
+                    <ion-icon class="icon-big" name="alarm-outline"></ion-icon>
+                    <h3>Ready in 20 minuts</h3>
+                    <p>                    Food is one of the basic necessities of life. Food contains nutrients—substances essential for 
+                        the growth, repair, and maintenance of body tissues and for the regulation of vital processes.</p>
+                </div>
+                <div class="colspan">
+                    <ion-icon class="icon-big" name="fast-food-outline"></ion-icon>
+                    <h3>100% organic!</h3>
+                    <p>                    Food is one of the basic necessities of life. Food contains nutrients—substances essential for 
+                        the growth, repair, and maintenance of body tissues and for the regulation of vital processes.</p>
+                </div>
+                <div class="colspan">
+                    <ion-icon class="icon-big" name="cart-outline"></ion-icon>
+
+                    <h3>Order any thing</h3>
+                    <p>                    Food is one of the basic necessities of life. Food contains nutrients—substances essential for 
+                        the growth, repair, and maintenance of body tissues and for the regulation of vital processes.</p>
+                </div>
+            </div>
+        </section>
+        <section class="section-meals" data-aos="fade-in" data-aos-duration="2000">
+            <ul class="meals-showcase clearfix" style="width: 100%;">
+                <li style="width: 25%; height: 300px;">
+                    <figure class="meal-photo">
+                        <img src="1.jpeg" alt="" style="height: 250px;">
+                    </figure>
+                </li>
+                <li style="width: 25%; height: 300px;">
+                    <figure class="meal-photo">
+                        <img src="3.jpeg" alt="" style="height: 250px;">
+                    </figure>
+                </li>
+                <li style="width: 25%; height: 300px;">
+                    <figure class="meal-photo">
+                        <img src="4.jpeg" alt="" style="height: 250px;">
+                    </figure>
+                </li >
+                <li style="width: 25%; height: 300px;">
+                    <figure class="meal-photo">
+                        <img src="5.jpeg" alt="" style="height: 250px;">
+                    </figure>
+                </li>
+            </ul>
+            <ul class="meals-showcase clearfix" style="width: 100%;">
+                <li>
+                    <figure class="meal-photo">
+                        <img src="6.jpeg" alt="" style="height: 250px;">
+                    </figure>
+                </li>
+                <li>
+                    <figure class="meal-photo">
+                        <img src="9.jpeg" alt="" style="height: 250px;">
+                    </figure>
+                </li>
+                <li>
+                    <figure class="meal-photo">
+                        <img src="12.jpeg" alt="" style="height: 250px;">
+                    </figure>
+                </li>
+                <li>
+                    <figure class="meal-photo">
+                        <img src="14.jpeg" alt="" style="height: 250px;">
+                    </figure>
+                </li>
+            </ul>
+
+        </section>
+        <section class="section-steps" id="hiw" data-aos="fade-up-right" data-aos-duration="2000">
+            <div class="row">
+                <h2 >How it works &mdash; Simple as 1,2,3 </h2>
+            </div>
+            <div class="row">
+                <div class="steps-box image" data-aos="slide-left" data-aos-duration="1000">
+                    <img src="phone.jpeg" alt="" class="hello">
+                </div>
+                <div class="steps-box stepss">
+                    <div class="works-step" style="padding-left: 170px;">
+                        <div style="margin-right: 10px;">1</div>
+                        <p style="margin-top: 13px;">Choose plan that fits best for your need and sign up today</p>
+                    </div>
+                    <div class="works-step" style="padding-left: 170px;">
+                        <div style="margin-right: 10px;">2</div>
+                        <p style="margin-top: 13px;">pay for the plan and download the app</p>
+                    </div>
+                    <div class="works-step" style="padding-left: 170px;">
+                        <div style="margin-right: 10px;">3</div>
+                        <p style="margin-top: 13px;">you are done start ordering!!</p>
+                    </div>
+                    <a href="#" class="btn-app"><img src="playstore.png" alt=""></a>
+                    <a href="#" class="btn-app"><img src="appstore.png" alt=""></a>
+                </div>
+            </div>
+
+        </section>
+        <section class="section-cities air" id="citi" >
+            <div class="">
+                <h2>we're currently in these cities</h2>
+            </div>
+            <div class="row ">
+                <div class="col span-1-of-4 aiir">
+                    <img src="lisbon.jpeg" alt="" > 
+                    <h3>
+                        LISBON
+                    </h3>
+                    <div class="city-features">
+                        <ion-icon class="icon-small" name="person-circle-outline"></ion-icon>
+                        16000+ happy customers.
+                    </div>
+                    <div class="city-features">
+                        <ion-icon class="icon-small" name="star-outline"></ion-icon>
+                        500+ chefs
+                    </div>
+                    <div class="city-features">
+                        <ion-icon class="icon-small" name="logo-twitter"></ion-icon>
+                        <a href="#">@delicious_food</a>
+                    </div>
+                </div>
+                <div class="col span-1-of-4 aiir" >
+                    <img src="berlin.jpeg" alt="" >
+                    <h3>
+                        BERLIN
+                    </h3>
+                    <div class="city-features">
+                        <ion-icon class="icon-small" name="person-circle-outline"></ion-icon>
+                        18000+ happy customers.
+                    </div>
+                    <div class="city-features">
+                        <ion-icon class="icon-small" name="star-outline"></ion-icon>
+                        250+ chefs
+                    </div>
+                    <div class="city-features">
+                        <ion-icon class="icon-small" name="logo-twitter"></ion-icon>
+                        <a href="#">@delicious_food</a>
+                    </div>
+                </div>
+                <div class="col span-1-of-4 aiir">
+                    <img src="london.jpeg" alt="" >
+                    <h3>
+                        LONDON
+                    </h3>
+                    <div class="city-features">
+                        <ion-icon class="icon-small" name="person-circle-outline"></ion-icon>
+                        15800+ happy customers.
+                    </div>
+                    <div class="city-features">
+                        <ion-icon class="icon-small" name="star-outline"></ion-icon>
+                        786+ chefs
+                    </div>
+                    <div class="city-features">
+                        <ion-icon class="icon-small" name="logo-twitter"></ion-icon>
+                        <a href="#">@delicious_food</a>
+                    </div>
+                </div>
+                <div class="col span-1-of-4 aiir">
+                    <img src="san fransisco.jpeg" alt="" >
+                    <h3>
+                        SAN FRANSISCO
+                    </h3>
+                    <div class="city-features">
+                        <ion-icon class="icon-small" name="person-circle-outline"></ion-icon>
+                        18790+ happy customers.
+                    </div>
+                    <div class="city-features">
+                        <ion-icon class="icon-small" name="star-outline"></ion-icon>
+                        810+ chefs
+                    </div>
+                    <div class="city-features">
+                        <ion-icon class="icon-small" name="logo-twitter"></ion-icon>
+                        <a href="#">@delicious_food</a>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+        <section>
+            <div class="hey">
+                <div class="section-testinomials" data-aos="zoom-out" data-aos-duration="2000">
+                    <div class="row">
+                        <h2>Our cusutomers can't live without us</h2>
+                    </div>
+                    <div class="row">
+                        <div class="cutomer3">
+                            <blockquote>
+                                I recently had the pleasure of dining at krithunga, and I must say it was an 
+                                extraordinary culinary experience that exceeded all my expectations. From the moment I
+                                walked through the doors, I was greeted with warm hospitality and an ambiance that set
+                                the perfect tone for a memorable evening.
+                                <cite><img src="customer1.webp" alt="">-albert</cite>
+                            </blockquote>
+                        </div>
+                        <div class="cutomer3">
+                            <blockquote>
+                                I recently had the pleasure of dining at krithunga, and I must say it was an 
+                                extraordinary culinary experience that exceeded all my expectations. From the moment I
+                                walked through the doors, I was greeted with warm hospitality and an ambiance that set
+                                the perfect tone for a memorable evening.
+                                <cite><img src="customer2.webp" alt="">-isabella</cite>
+                            </blockquote>
+                        </div>
+                        <div class="cutomer3">
+                            <blockquote>
+                                I recently had the pleasure of dining at krithunga, and I must say it was an 
+                                extraordinary culinary experience that exceeded all my expectations. From the moment I
+                                walked through the doors, I was greeted with warm hospitality and an ambiance that set
+                                the perfect tone for a memorable evening.
+                                <cite><img src="customer3.jpeg" alt="">-john</cite>
+                            </blockquote>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section-plans" id="plans" data-aos="fade-in" data-aos-duration="2000">
+            <div class="row">
+                <h2>Start eating healthy today</h2>
+            </div>
+            <div class="row">
+                <div class="col3">
+                    <div class="plan-box" data-aos="zoom-in" data-aos-duration="2000">
+                        <div>
+                            <h3>premium</h3>
+                            <div class="plan-price">$199 <span>/ month</span></div>
+                            <p class="plan-price-meal">That's only $12.22 per meal</p>
+                        </div>
+                        <div>
+                            <ul>
+                                <li><ion-icon class="icon-small"name="checkmark-circle-outline"></ion-icon>1 meal in everyday</li>
+                                <li><ion-icon class="icon-small" name="checkmark-circle-outline"></ion-icon>order 24*7</li>
+                                <li><ion-icon class="icon-small" name="checkmark-circle-outline"></ion-icon>access to newest creation</li>
+                                <li><ion-icon class="icon-small" name="checkmark-circle-outline"></ion-icon>Free delivery</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <a href="#" class="btn btn-full">Sign up</a>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col3">
+                    <div class="plan-box" data-aos="zoom-in" data-aos-duration="2000">
+                        <div>
+                            <h3>pro</h3>
+                            <div class="plan-price">$119 <span>/ month</span></div>
+                            <p class="plan-price-meal" style="color: black;">That's only $22.22 per meal</p>
+                        </div>
+                        <div>
+                            <ul>
+                                <li><ion-icon class="icon-small" name="checkmark-circle-outline"></ion-icon>1 meal in 10 days</li>
+                                <li><ion-icon class="icon-small" name="checkmark-circle-outline"></ion-icon>order 24*7</li>
+                                <li><ion-icon class="icon-small" name="checkmark-circle-outline"></ion-icon>access to newest creation</li>
+                                <li><ion-icon class="icon-small" name="checkmark-circle-outline"></ion-icon>Free delivery</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <a href="#" class="btn btn-ghosh" style="color: black;">Sign up</a>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col3">
+                    <div class="plan-box" data-aos="zoom-in" data-aos-duration="2000">
+                        <div>
+                            <h3>starter</h3>
+                            <div class="plan-price">$100 <span>/ month</span></div>
+                            <p class="plan-price-meal">That's only $52.22 per meal</p>
+                        </div>
+                        <div>
+                            <ul>
+                                <li><ion-icon class="icon-small" name="checkmark-circle-outline"></ion-icon>1 meal in everyday</li>
+                                <li><ion-icon class="icon-small" name="checkmark-circle-outline"></ion-icon>order 24*7</li>
+                                <li><ion-icon class="icon-small" name="checkmark-circle-outline"></ion-icon>access to newest creation</li>
+                                <li><ion-icon class="icon-small" name="checkmark-circle-outline"></ion-icon>Free delivery</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <a href="#" class="btn btn-full" style="color: black;">Sign up</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <section class="section-form" id="signup" >
+            <div class="row">
+                <h2>we're happy to hear from you</h2>
+            </div>
+            <div class="row">
+                <form action="#" method="POST" class="contact-form">
+                    <div class="row asus">
+                        <div class="col122">
+                            <label >Name</label>
+                        </div>
+                        <div class="col233">
+                            <input type="text" name="name" id="name" placeholder="your name here" required>
+                        </div>
+                    </div>
+                    <div class="row asus">
+                        <div class="col122">
+                            <label >Email</label>
+                        </div>
+                        <div class="col233">
+                            <input type="email" name="email" id="email" placeholder="your email here" required>
+                        </div>
+                    </div>
+                    <div class="row asus">
+                        <div class="col122">
+                            <label >How did you find us</label>
+                        </div>
+                        <div class="col233">
+                            <select name="find-us" id="find-us">
+                                <option value="friends">friends</option>
+                                <option value="search">search</option>
+                                <option value="adds">adds</option>
+                                <option value="other">opther</option>
+                            </select>
+                        </div>
+                    </div>
+
+
+                    <div class="row asus">
+                        <div class="col122">
+                            <label >news letter</label>
+                        </div>
+                        <div class="col233">
+                            <input type="checkbox" name="news" id="news" checked>
+                        </div>
+                    </div>
+                    <div class="row asus">
+                        <div class="col122">
+                            <label >drop a line</label>
+                        </div>
+                        <div class="col233">
+                            <textarea name="text" id="ta" cols="70" rows="5"></textarea>
+                        </div>
+                    </div>
+                    <div class="row asus">
+                        <div class="col122">
+                            <label >&nbsp;</label>
+                        </div>
+                        <div class="col233">
+                            <input type="submit" value="send-me">
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </section>
+        <footer>
+            <div class="row">
+                <div class="col1of3">
+                    <div class="footer-nav">
+                        <ul>
+                            <li><a href="#">About us</a></li>
+                            <li><a href="#">Blog</a></li>
+                            <li><a href="#">Press</a></li>
+                            <li><a href="#">IOS App</a></li>
+                            <li><a href="#">Android App</a></li>
+                        </ul>
+                    </div>
+                    <div class="col1of2">
+                        <div >
+                            <ul class="social-links">
+                                <li class="fb"><ion-icon name="logo-facebook"></ion-icon></li>
+                                <li class="twitter"><ion-icon name="logo-twitter"></ion-icon></li>
+                                <li class="google"><ion-icon name="logo-google"></ion-icon></li>
+                                <li class="insta"><ion-icon name="logo-instagram"></ion-icon></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="row">
+                <p>copyright &copy; 2023 by vamshi mamidipelli. All rights reserved</p>
+            </div>
+        </footer>
+        <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+        <script>
+          AOS.init();
+        </script>
+        <script>
+        $(document).ready(function(){
+        // Add smooth scrolling to all links
+        $("a").on('click', function(event) {
+
+            // Make sure this.hash has a value before overriding default behavior
+            if (this.hash !== "") {
+            // Prevent default anchor click behavior
+            event.preventDefault();
+
+            // Store hash
+            var hash = this.hash;
+
+            // Using jQuery's animate() method to add smooth page scroll
+            // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+            $('html, body').animate({
+                scrollTop: $(hash).offset().top
+            }, 800, function(){
+
+                // Add hash (#) to URL when done scrolling (default click behavior)
+                window.location.hash = hash;
+            });
+            } // End if
+        });
+        });
+        </script>
+        
+    </body>
+</html>
